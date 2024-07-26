@@ -1,4 +1,4 @@
-package pe.codigog8.firebaseconnect
+package pe.elecciones.partidospoliticos
 
 import io.flutter.embedding.android.FlutterActivity
 

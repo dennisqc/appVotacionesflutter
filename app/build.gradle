@@ -24,7 +24,7 @@ if (flutterVersionName == null) {
 }
 
 android {
-    namespace = "pe.codigog8.firebaseconnect"
+    namespace = "pe.elecciones.partidospoliticos"
     compileSdk = 34 // Asegúrate de que esta versión coincida con tu versión de Flutter
 
     compileOptions {
@@ -33,7 +33,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "pe.codigog8.firebaseconnect"
+        applicationId = "pe.elecciones.partidospoliticos"
         minSdk = 23
         targetSdk = 34 // Asegúrate de que esta versión coincida con tu versión de Flutter
         versionCode = flutterVersionCode.toInteger()

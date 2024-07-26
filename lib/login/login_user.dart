@@ -1,11 +1,11 @@
-import 'package:animate_do/animate_do.dart';
+
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
+
 import 'package:partidospoliticos/pages/stream_votos.dart';
 import 'package:partidospoliticos/login/register_user.dart';
-import 'package:partidospoliticos/pages/home_page.dart';
+
 
 class LoginUser extends StatelessWidget {
   TextEditingController correo = TextEditingController();

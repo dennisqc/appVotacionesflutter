@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "334101998756",
+    "project_id": "appvotaciones-ad085",
+    "storage_bucket": "appvotaciones-ad085.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:334101998756:android:a5f690e6e4187e35c84a31",
+        "android_client_info": {
+          "package_name": "pe.elecciones.partidospoliticos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzk7gxMzLc_xbiUaY1cygxSQf0VNQ2fgw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

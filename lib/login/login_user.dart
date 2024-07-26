@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:partidospoliticos/configuration/stream_votos.dart';
+import 'package:partidospoliticos/pages/stream_votos.dart';
 import 'package:partidospoliticos/login/register_user.dart';
 import 'package:partidospoliticos/pages/home_page.dart';
 
@@ -117,7 +117,7 @@ class LoginUser extends StatelessWidget {
                 ),
                 Image.asset(
                   'assets/images/onpe1.jpg',
-                  width: 200, // Ajusta el tamaño según tus necesidades
+                  width: 200, 
                   height: 200,
                 ),
                 SizedBox(

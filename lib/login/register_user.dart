@@ -135,7 +135,7 @@ class _RegisterUserState extends State<RegisterUser> {
             gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
-              colors: [Color(0xff012f3d), Color(0xff0a4f64)],
+              colors: [Color.fromARGB(255, 137, 213, 236), Color(0xff0a4f64)],
             ),
           ),
           child: SingleChildScrollView(
@@ -146,7 +146,11 @@ class _RegisterUserState extends State<RegisterUser> {
                   style: TextStyle(color: Colors.white, fontSize: 30),
                 ),
                 SizedBox(height: 26),
-                FlutterLogo(size: 200),
+                Image.asset(
+                  'assets/images/onpe1.jpg',
+                  width: 200,
+                  height: 200,
+                ),
                 SizedBox(height: 26),
                 Text(
                   "Crea tu cuenta",
@@ -163,17 +167,10 @@ class _RegisterUserState extends State<RegisterUser> {
                     child: Text("Crear Cuenta"),
                   ),
                 SizedBox(height: 16),
-                Text(
-                  _errorMessage,
-                  style: TextStyle(color: Colors.red),
-                ),
-                SizedBox(height: 16),
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => LoginUser()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => LoginUser()));
                   },
                   child: Text(
                     "o iniciar sesión",

@@ -11,7 +11,7 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   runApp(MaterialApp(
-    home: StreamVotos(),
+    home: LoginUser(),
     debugShowCheckedModeBanner: false,
   ));
 }

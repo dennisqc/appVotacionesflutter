@@ -28,8 +28,8 @@ android {
     compileSdk = 34 // Asegúrate de que esta versión coincida con tu versión de Flutter
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
 
     defaultConfig {

@@ -12,7 +12,20 @@
           "package_name": "pe.elecciones.partidospoliticos"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "334101998756-24d8309lqa2r3mk86sbusftmvos647bi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "pe.elecciones.partidospoliticos",
+            "certificate_hash": "92cb79d724e4ea9d61912b63cef31d0f31e990ee"
+          }
+        },
+        {
+          "client_id": "334101998756-s2k9s9grj07hftj3e6q83glnpmt0q1h8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBzk7gxMzLc_xbiUaY1cygxSQf0VNQ2fgw"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "334101998756-s2k9s9grj07hftj3e6q83glnpmt0q1h8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "334101998756-v2gife689jqd9gvd6ethdf3572jutjd8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "pe.elecciones.partidospoliticos"
+              }
+            }
+          ]
         }
       }
     }

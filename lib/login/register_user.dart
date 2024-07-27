@@ -1,5 +1,5 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:partidospoliticos/login/login_user.dart';
 
 class RegisterUser extends StatefulWidget {
@@ -30,14 +30,18 @@ class _RegisterUserState extends State<RegisterUser> {
             style: TextStyle(color: Colors.white),
             decoration: InputDecoration(
               filled: true,
-              fillColor: Colors.white.withOpacity(.085),
+              fillColor: Colors.white.withOpacity(0.2),
               contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(30),
+                borderSide: BorderSide.none,
+              ),
               focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(26),
+                borderRadius: BorderRadius.circular(30),
                 borderSide: BorderSide.none,
               ),
               enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(26),
+                borderRadius: BorderRadius.circular(30),
                 borderSide: BorderSide.none,
               ),
             ),
@@ -85,43 +89,6 @@ class _RegisterUserState extends State<RegisterUser> {
     }
   }
 
-  Future<void> login() async {
-    final email = _correoController.text.trim();
-    final password = _contrasenaController.text.trim();
-
-    if (email.isEmpty || password.isEmpty) {
-      setState(() {
-        _errorMessage = "Correo y contraseña no pueden estar vacíos.";
-      });
-      return;
-    }
-
-    setState(() {
-      _isLoading = true;
-      _errorMessage = '';
-    });
-
-    try {
-      UserCredential userCredential = await _auth.signInWithEmailAndPassword(
-        email: email,
-        password: password,
-      );
-      print("Inicio de sesión exitoso: ${userCredential.user}");
-      setState(() {
-        _errorMessage = "Inicio de sesión exitoso.";
-      });
-    } catch (e) {
-      print("Error al iniciar sesión: ${e.toString()}");
-      setState(() {
-        _errorMessage = "Error al iniciar sesión: ${e.toString()}";
-      });
-    } finally {
-      setState(() {
-        _isLoading = false;
-      });
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -134,46 +101,73 @@ class _RegisterUserState extends State<RegisterUser> {
             gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
-              colors: [Color.fromARGB(255, 137, 213, 236), Color(0xff0a4f64)],
+              colors: [Color(0xff0a4f64), Color(0xff012f3d)],
             ),
           ),
           child: SingleChildScrollView(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   "App de Votaciones",
-                  style: TextStyle(color: Colors.white, fontSize: 30),
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 36,
+                      fontWeight: FontWeight.bold),
                 ),
-                SizedBox(height: 26),
+                SizedBox(height: 20),
                 Image.asset(
                   'assets/images/onpe1.jpg',
-                  width: 200,
-                  height: 200,
+                  width: 150,
+                  height: 150,
                 ),
-                SizedBox(height: 26),
+                SizedBox(height: 20),
                 Text(
                   "Crea tu cuenta",
-                  style: TextStyle(color: Colors.white, fontSize: 25),
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 24,
+                      fontWeight: FontWeight.w600),
                 ),
+                SizedBox(height: 20),
                 fieldCuenta("Correo", _correoController),
-                fieldCuenta("Contraseña", _contrasenaController),
                 SizedBox(height: 16),
+                fieldCuenta("Contraseña", _contrasenaController),
+                SizedBox(height: 24),
                 if (_isLoading)
                   CircularProgressIndicator()
                 else
                   ElevatedButton(
                     onPressed: createAccount,
-                    child: Text("Crear Cuenta"),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Color(0xff00796b),
+                      foregroundColor: Colors.white,
+                      padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                    ),
+                    child: Text(
+                      "Crear Cuenta",
+                      style: TextStyle(fontSize: 18),
+                    ),
                   ),
                 SizedBox(height: 16),
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => LoginUser()));
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LoginUser(),
+                      ),
+                    );
                   },
                   child: Text(
                     "o iniciar sesión",
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        decoration: TextDecoration.underline),
                   ),
                 ),
               ],
